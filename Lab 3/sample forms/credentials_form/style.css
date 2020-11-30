@@ -1,0 +1,23 @@
+.btn_submit {
+	background-color: rgb(4, 196, 4);
+	color: white;
+}
+
+.btn_reset {
+	background-color: red;
+	color: white;
+}
+
+.inside_form {
+	background-color: navy;
+	color: rgb(223, 223, 11);
+	border: 50px;
+	text-align: center;
+}
+
+body {
+	background-color: orange;
+	color: rgb(223, 223, 11);
+	font-size: 22px;
+	text-align: center;
+}
