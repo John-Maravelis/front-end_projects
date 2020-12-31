@@ -13,22 +13,19 @@ const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
 	let alertMessage;
 	let flag = false;
-	if (firstIP.value.trim() > 255 || secondIP.value.trim() > 255 || thirdIP.value.trim() > 255 || fourthIP.value.trim() > 255) {
+	if (firstIP.value > 255 || secondIP.value > 255 || thirdIP.value > 255 || fourthIP.value > 255) {
 		flag = true;
 		alertMessage = "Incorrect values";
 	}
 
-	if (firstMask.value.trim() > 255 || secondMask.value.trim() > 255 || thirdMask.value.trim() > 255 || fourthMask.value.trim() > 255) {
+	if (firstMask.value > 255 || secondMask.value > 255 || thirdMask.value > 255 || fourthMask.value > 255) {
 		flag = true;
 		alertMessage = "Incorrect values";
 	}
 
 	if (flag === true) {
-		alert(alertMessage);
-		return flag;
-	} else {
-		findNetID();
-		console.log(getAddresses(), findNetID());
+        alert(alertMessage);
+        e.preventDefault();
 	}
 });
 
@@ -37,18 +34,42 @@ function convertToBin(num) {
 }
 
 function findNetID() {
-	let first = firstIP.value.trim() & firstMask.value.trim();
-	let second = secondIP.value.trim() & secondMask.value.trim();
-	let third = thirdIP.value.trim() & thirdMask.value.trim();
-	let fourth = fourthIP.value.trim() & fourthMask.value.trim();
+	let first = parseInt(firstIP) & parseInt(firstMask);
+	let second = parseInt(secondIP) & parseInt(secondMask);
+	let third = parseInt(thirdIP) & parseInt(thirdMask);
+	let fourth = parseInt(fourthIP) & parseInt(fourthMask);
 
 	let netID = `${first}.${second}.${third}.${fourth}`;
 	return netID;
 }
 
-function getAddresses() {
-	let ipAddress = `${convertToBin(firstIP)}.${convertToBin(secondIP)}.${convertToBin(thirdIP)}.${convertToBin(fourthIP)}`;
-	let maskAddress = `${convertToBin(firstMask)}.${convertToBin(secondMask)}.${convertToBin(thirdMask)}.${convertToBin(fourthMask)}`;
-	return ipAddress, maskAddress;
+function getIP() {
+	let ipAddress = `${convertToBin(firstIP)}.
+						${convertToBin(secondIP)}.
+						${convertToBin(thirdIP)}.
+						${convertToBin(fourthIP)}`;
+	return ipAddress;
 }
 
+function getMask(){
+	let maskAddress = `${convertToBin(firstMask)}.
+						${convertToBin(secondMask)}.
+						${convertToBin(thirdMask)}.
+						${convertToBin(fourthMask)}`;
+	return maskAddress;
+}
+
+// ! FIX NaN return on IP and mask
+function init(){
+	let netID = findNetID();
+	let IP = getIP();
+	let mask = getMask();
+
+	let divNetID = document.getElementById("netID");
+	let divIP = document.getElementById("IP");
+	let divMask = document.getElementById("mask");
+
+	divNetID.innerHTML = findNetID();
+	divIP.innerHTML = IP;
+	divMask.innerHTML = mask;
+}
