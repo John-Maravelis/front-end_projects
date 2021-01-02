@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Εισαγωγή IP και Μάσκας</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script defer src="script.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <form id="form" action="calculations.html" method="GET">
+    <form id="form" action="results.html" method="GET">
         <fieldset class="inside_box">
             <legend>Μάσκα και IPv4</legend>
             <ul style="list-style-type:disc">
                 <div class="ip_list">
                     <li>
                         Διεύθυνση IP
-                        <input id="firstIP" name="firstIP" type="text" pattern="[0-9]{1,3}" title="You can use only a max of three numbers" required>
+                        <input id="firstIP" name="firstIP" type="number" pattern="[0-9]{1,3}" title="You can use only a max of three numbers" required>
                         - <input id="secondIP" name="secondIP" type="text" pattern="[0-9]{1,3}" title="You can use only a max of three numbers" required>
                         - <input id="thirdIP" name="thirdIP" type="text" pattern="[0-9]{1,3}" title="You can use only a max of three numbers" required>
                         - <input id="fourthIP" name="fourthIP" type="text" pattern="[0-9]{1,3}" title="You can use only a max of three numbers" required>
@@ -35,7 +35,6 @@
 
             <button type="submit" name="submit">Submit</button>
             <button type="reset" name="reset">Reset</button>
-
         </fieldset>
     </form>
 </body>
