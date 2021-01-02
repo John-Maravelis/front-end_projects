@@ -67,7 +67,7 @@ function getMask() {
 	return maskAddress;
 }
 
-function init() {
+function getResults() {
 	let netID = findNetID();
 	let IP = getIP();
 	let mask = getMask();
