@@ -1,37 +1,52 @@
-*, *::before, *::afrer{
-    box-sizing: border-box;
-    font-family: Helvetica;
-    font-weight: normal;
+*, *::before, *::afrer {
+	box-sizing: border-box;
+	font-family: Helvetica;
+	font-weight: normal;
 }
 
-body{
-    padding: 0;
-    margin: 0;
+body {
+	padding: 0;
+	margin: 0;
 }
 
-.crossword{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
+#buttons {
+	position: absolute;
+	left: 10%;
+	top: 30%;
 }
 
-#buttons{
-    display: flex;
+.crossword {
+	display: grid;
+	justify-content: center;
+	align-content: top;
+	min-height: 100vh;
+	grid-template-columns: repeat(8, 50px);
+	grid-template-rows: repeat(8, 50px);
 }
 
-.crossword > input{
-cursor: pointer;
-font-size: 2rem;
-    border: 1px solid black;
-    outline: none;
+.crossword > input {
+	cursor: pointer;
+	font-size: 2rem;
+	border: 1px solid black;
+	outline: none;
+	text-align: center;
 }
 
-.crossword > .line{
-    font-size: 2rem;
-    border: 0px none;
-    outline: none;
-    text-align: center;
+.crossword > .line {
+	font-size: 2rem;
+	border: 0px none;
+	outline: none;
+	text-align: center;
+}
+
+.crossword > .blackBox {
+	cursor: default;
+	background-color: black;
+}
+
+table {
+	position: absolute;
+	left: 30%;
+	top: 70%;
+	text-align: left;
 }
