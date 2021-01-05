@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 			e.preventDefault();
 		}
 	});
-}, false);
+}, false); 
 
 
 function convertToBin(num) {
