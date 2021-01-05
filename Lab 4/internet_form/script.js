@@ -1,13 +1,4 @@
 //! FIX null value of getElementById
-var firstIP = document.getElementById("firstIP");
-var secondIP = document.getElementById("secondIP");
-var thirdIP = document.getElementById("thirdIP");
-var fourthIP = document.getElementById("fourthIP");
-
-var firstMask = document.getElementById("firstMask");
-var secondMask = document.getElementById("secondMask");
-var thirdMask = document.getElementById("thirdMask");
-var fourthMask = document.getElementById("fourthMask");
 // var firstIP = 192;
 // var secondIP = 168;
 // var thirdIP = 2;
@@ -16,26 +7,40 @@ var fourthMask = document.getElementById("fourthMask");
 // var secondMask = 255;
 // var thirdMask = 255;
 // var fourthMask = 0;
-var form = document.getElementById("form");
+ 
+window.addEventListener("load", () => {
+	var firstIP = document.getElementById("firstIP");
+	var secondIP = document.getElementById("secondIP");
+	var thirdIP = document.getElementById("thirdIP");
+	var fourthIP = document.getElementById("fourthIP");
 
-form.addEventListener("submit", (e) => {
-	let alertMessage;
-	let flag = false;
-	if (firstIP.value > 255 || secondIP.value > 255 || thirdIP.value > 255 || fourthIP.value > 255) {
-		flag = true;
-		alertMessage = "Incorrect values";
-	}
+	var firstMask = document.getElementById("firstMask");
+	var secondMask = document.getElementById("secondMask");
+	var thirdMask = document.getElementById("thirdMask");
+	var fourthMask = document.getElementById("fourthMask");
 
-	if (firstMask.value > 255 || secondMask.value > 255 || thirdMask.value > 255 || fourthMask.value > 255) {
-		flag = true;
-		alertMessage = "Incorrect values";
-	}
+	var form = document.getElementById("form");
 
-	if (flag === true) {
-        alert(alertMessage);
-        e.preventDefault();
-	}
-});	
+	form.addEventListener("submit", (e) => {
+		let alertMessage;
+		let flag = false; 
+		if (firstIP.value > 255 || secondIP.value > 255 || thirdIP.value > 255 || fourthIP.value > 255) {
+			flag = true;
+			alertMessage = "Incorrect values";
+		}
+	
+		if (firstMask.value > 255 || secondMask.value > 255 || thirdMask.value > 255 || fourthMask.value > 255) {
+			flag = true;
+			alertMessage = "Incorrect values";
+		}
+	
+		if (flag === true) {
+			alert(alertMessage);
+			e.preventDefault();
+		}
+	});
+}, false);
+
 
 function convertToBin(num) {
 	return Number(num).toString(2);
@@ -79,8 +84,8 @@ function getResults() {
 	let divMask = document.getElementById("maskAddress");
 
 	divNetID.innerHTML = netID;
-	divIp.innerHTML = `${firstIP}.${secondIP}.${thirdIP}.${fourthIP}`
-	divMask.innerHTML = `${firstMask}.${secondMask}.${thirdMask}.${fourthMask}`
+	divIp.innerHTML = `${firstIP}.${secondIP}.${thirdIP}.${fourthIP}`;
+	divMask.innerHTML = `${firstMask}.${secondMask}.${thirdMask}.${fourthMask}`;
 	divIpBin.innerHTML = IP;
 	divMaskBin.innerHTML = mask;
 }
