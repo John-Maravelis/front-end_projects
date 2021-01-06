@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form id="form" action="#" method="GET">
+    <form id="form" method="GET">
         <fieldset class="inside_box">
             <legend>Μάσκα και IPv4</legend>
             <ul style="list-style-type:disc">
@@ -33,28 +33,26 @@
                     </li>
                 </div>
             </ul>
-            <button type="submit" name="submit" onclick="init()">Submit</button>
+            <button type="submit" name="submit">Submit</button>
             <button type="reset" name="reset">Reset</button>
         </fieldset>
     </form>
-    <div id="table">
-        <table >
-            <th>Your details</th>
-            <th>To binary</th>
-            <th>Network address</th>
-            <tr>
-                <td>
-                    <div id="ipAddress"></div>
-                </td>
-                <td><div id="IP"></div></td>
-            </tr>
-            <tr>
-                <td><div id="maskAddress"></div></td>
-                <td><div id="mask"></div></td>
-                <td><div id="netID"></div></td>
-            </tr>
-        </table>
-    </div>
+    <table id="table">
+        <th>Your details</th>
+        <th>To binary</th>
+        <th>Network address</th>
+        <tr>
+            <td>
+                <div id="ipAddress"></div>
+            </td>
+            <td><div id="IP"></div></td>
+        </tr>
+        <tr>
+            <td><div id="maskAddress"></div></td>
+            <td><div id="mask"></div></td>
+            <td><div id="netID"></div></td>
+        </tr>
+    </table>
 </body>
 
 </html>
