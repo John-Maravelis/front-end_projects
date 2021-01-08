@@ -1,6 +1,6 @@
 *, *::before, *::afrer {
 	box-sizing: border-box;
-	font-family: Helvetica;
+	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 }
 
@@ -32,7 +32,8 @@ body {
 	text-align: center;
 }
 
-.crossword > .line {
+.crossword > .numbers {
+	cursor: default;
 	font-size: 2rem;
 	border: 0px none;
 	outline: none;
@@ -48,5 +49,21 @@ table {
 	position: absolute;
 	left: 30%;
 	top: 70%;
+	text-align: left;
+	font-size: 18px;
+}
+
+#instructions{
+	position: absolute;
+	left: 30%;
+	top: 82%;
+	text-align: left;
+	color: red;
+}
+
+#test{
+	position: absolute;
+	left: 30%;
+	top: 82%;
 	text-align: left;
 }
