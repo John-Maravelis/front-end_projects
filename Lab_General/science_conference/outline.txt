@@ -1,0 +1,17 @@
+
+navbar:
+    - Homepage,
+    - Conference info,
+    - Conference organizers -> parallel horizontal view of the organizers,
+    - Conference program -> if: logged in else: log in promt
+    - city tour guide,
+    - log in/ sign up (maybe button above navbar)
+        - name,
+        - lastname,
+        - username,
+        - password,
+        - confirm password,
+        - email,
+        - phone number,
+        - Mr./ Mrs.
+        - agree to newsletter

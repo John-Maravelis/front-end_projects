@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/registration.css" type="text/css">
+    <link rel="shortcut icon" href="../favicon.png">
+    <title>Συνέδριο</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <div id="topbar"> <a href="#">ΣΥΝΔΕΣΗ / ΕΓΓΡΑΦΗ</a> </div>
+
+            <nav id="navbar">
+                <a href="./index.html" id="logo"> <img src="../logo.svg" alt="site logo"> </a>
+                
+                <ul id="main-menu">
+                    <li> <a href="./index.html">ΚΕΝΤΡΙΚΗ</a> </li>
+                    <li> <a href="#">ΔΙΟΡΓΑΝΩΤΕΣ</a> </li>
+                    <li> <a href="#">ΠΛΗΡΟΦΟΡΙΕΣ</a> </li>
+                    <li> <a href="#">ΠΡΟΓΡΑΜΜΑ</a> </li>
+                    <li> <a href="#">ΟΔΗΓΟΣ ΠΟΛΗΣ</a> </li>
+                </ul>
+
+            </nav> 
+        </div>
+        </header>
+
+    <form class="registration-form">
+        
+        <label for="firstName">Όνομα</label>  
+        <input type="text" name="firstName" placeholder="Εισάγετε το όνομά σας" 
+            pattern="[a-zA-Z]" title="You can't use any numbers or special symbols" required>
+        <br>
+
+        <label for="lastName">Επώνυμο</label>  
+        <input type="text" name="lastName" placeholder="Εισάγετε το επώνυμό σας" 
+            pattern="[a-zA-Z]" title="You can't use any numbers or special symbols" required>
+        <br>
+
+        <label for="username">Username</label>  
+        <input type="text" name="username" placeholder="Εισάγετε username" 
+            pattern="[a-zA-Z] minlength="6" maxlength="8" title="Please enter a valid username between 6-8 characters">
+        <br>
+
+        <label for="email">E-mail</label>  
+        <input type="email" name="email" placeholder="Εισάγετε e-mail" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" 
+            title="Please enter a valid e-mail address" required>
+        <br>
+
+        <label for="phoneNumber">Τηλέφωνο<label>  
+        <input type="text" name="phoneNumber" placeholder="Εισάγετε τηλέφωνο" 
+            pattern="[0-9]" maxlength="10" title="You can't use any letters or special symbols" required>
+        <br>
+        
+        <label for="password">Password</label>  
+        <input type="password" name="password" placeholder="Εισάγετε password"
+            minlength="6" maxlength="8" required>
+        <br>
+
+        <label for="passwordConfirm">Επιβεβαίωση Password</label>  
+        <input type="password" name="passwordConfirm" placeholder="Επαλήθευση password"
+            minlength="6" maxlength="8" required>
+        <br>
+
+        <input class="radio" type="radio" name="radio_btn"> Mr.
+        <input class="radio" type="radio" name="radio_btn"> Mrs. 
+
+        <br>
+        <label for="checkbox">Συμφωνώ με τους όρους χρήσης</label>
+        <input type="checkbox" name="checkbox" required> 
+        
+        <br>
+
+        <input class="btn_submit" type="submit" name="submit" value="Αποστολή">
+        </form>
+
+</body>
+</html>
