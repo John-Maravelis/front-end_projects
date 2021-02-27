@@ -32,7 +32,7 @@
         </header>
 
     <form class="registration-form">
-        
+
         <label for="firstName">Όνομα</label>  
         <input type="text" name="firstName" placeholder="Εισάγετε το όνομά σας" 
             pattern="[a-zA-Z]" title="You can't use any numbers or special symbols" required>
@@ -57,7 +57,7 @@
         <input type="text" name="phoneNumber" placeholder="Εισάγετε τηλέφωνο" 
             pattern="[0-9]" maxlength="10" title="You can't use any letters or special symbols" required>
         <br>
-        
+
         <label for="password">Password</label>  
         <input type="password" name="password" placeholder="Εισάγετε password"
             minlength="6" maxlength="8" required>
@@ -74,11 +74,10 @@
         <br>
         <label for="checkbox">Συμφωνώ με τους όρους χρήσης</label>
         <input type="checkbox" name="checkbox" required> 
-        
-        <br>
 
-        <input class="btn_submit" type="submit" name="submit" value="Αποστολή">
-        </form>
+        <br>
+        <button type="submit" name="submitBtn">Αποστολή</button>
+    </form>
 
 </body>
 </html>

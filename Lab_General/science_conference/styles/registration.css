@@ -93,10 +93,10 @@ nav#navbar {
     display: block;
 }
 
-.registration-form input {
-    width: 90%;
+.registration-form label {
+    float: left;
 }
 
-.radio {
-    float: left;
+.registration-form input {
+    width: 100%;
 }
